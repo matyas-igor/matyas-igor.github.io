@@ -1,0 +1,658 @@
+html {
+    min-width: 980px;
+    margin: 0; padding: 0;
+}
+body {
+    height: 100%;
+    min-width: 980px;
+    margin: 0; padding: 0;
+}
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1240px;
+    min-width: 980px;
+}
+.container-fluid-inner {
+    margin: 0 0;
+    min-width: 980px;
+}
+
+.list-group-no-bordered * {
+    border: medium none;
+    border-radius: 0 !important;
+}
+
+.list-group-item-big {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 14px;
+}
+.list-group-item-big .icon {
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+#qstickerImagesContainer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e8e8e8;
+}
+
+#qstickerImagesUploaderBig {
+    text-align: center;
+}
+#qstickerImagesUploaderSmall {
+    text-align: center;
+}
+#qstickerImagesCarousel {
+
+}
+.fade.in.popover, .fade.in.modal {
+    opacity: 1;
+}
+.helper {
+    color: #666;
+}
+
+.helper-big {
+    font-size: 26px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.helper-medium {
+    color: #aaa;
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+.helper-upload {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 40px 20px;
+    text-align: center;
+    border: 6px dashed #666;
+    color: #555;
+}
+
+.helper-upload-divider {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.helper-button {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.helper-small {
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    position: relative; top: 1px;
+}
+
+.btn-text {
+    display: inline-block;
+    padding: 0px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+#qstickerImagesCarousel {position: relative;}
+#qstickerImagesCarousel .imagesContainer-wrapper {margin: 0 40px; overflow: hidden; position: relative; height: 100%; }
+#qstickerImagesCarousel .imagesContainer-content {position: absolute; height: 100%; text-align: center;}
+#qstickerImagesCarousel .imagesContainer-leftArrow, #qstickerImagesCarousel .imagesContainer-rightArrow {
+    position: absolute; height: 100%; width:35px; top: 0; text-align: center; cursor: hand; cursor: pointer;
+    transition: background-color .15s;
+    -webkit-transition: background-color .15s; /* Safari */
+}
+#qstickerImagesCarousel .imagesContainer-leftArrow i, #qstickerImagesCarousel .imagesContainer-rightArrow i {
+    position: relative;
+}
+#qstickerImagesCarousel .imagesContainer-leftArrow:hover, #qstickerImagesCarousel .imagesContainer-rightArrow:hover {
+    background-color: #ccc;
+}
+#qstickerImagesCarousel .imagesContainer-leftArrow {left: 0;}
+#qstickerImagesCarousel .imagesContainer-rightArrow {right: 0;}
+#qstickerImagesCarousel .imagesContainer-image .button-delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: -15px;
+    border-radius: 99px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+#qstickerImagesCarousel .imagesContainer-image,  body > .imagesContainer-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 80px;
+    width: 80px;
+    margin: 20px 20px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #000;
+}
+#qstickerImagesCarousel .imagesContainer-image.imagesContainer-imageLoading {
+    background-size: auto;
+    background-image: url(../img/content/ajax-loader.gif);
+}
+
+body > .imagesContainer-image {
+    opacity: 0.5;
+    border: medium none;
+}
+
+.input-priceContainer {
+    font-size: 16px;
+    position: relative;
+    top: 3px;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+
+.qstickerEditor-container {
+    position: relative;
+}
+
+.qstickerEditor-containerOverflow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.qstickerEditor-container canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.qstickerEditor-container .qstickerEditor-grid {
+    position: absolute;
+    border: 1px solid #999;
+}
+
+.qstickerEditor-container .qstickerEditor-grid.qstickerEditor-gridNoBordered {
+    border: medium none;
+}
+.qstickerEditor-container .qstickerEditor-grid.qstickerEditor-gridDragover {
+    background-color: #fff;
+    opacity: .6;
+}
+
+.qstickerEditor-container .qstickerEditor-caption {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-weight: 400;
+}
+
+.qstickerEditor-container .qstickerEditor-zoom {
+    position: absolute;
+    top: 38px;
+    left: 10px;
+    z-index: 100;
+}
+
+.qstickerEditor-container .qstickerEditor-zoom .button-zoom {
+    padding: 3px 8px;
+}
+
+.qstickerEditor-container .qstickerEditor-action {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 98px;
+}
+.qstickerEditor-container .qstickerEditor-action i {
+    position: relative;
+    top: 2px; margin-right: 4px;
+}
+
+.qstickerEditor-container .qstickerEditor-type {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 14px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.qstickerEditor-container .qstickerEditor-typeRight {
+    right: -3px;
+    left: auto;
+}
+.qstickerEditor-container .qstickerEditor-typeTop {
+    bottom: 56px;
+}
+
+.qstickerEditor-container .qstickerEditor-typeTitle {
+    margin-right: 15px;
+}
+
+.qstickerEditor-typeColor, .qstickerEditor-typeGrid {
+    display: inline-block;
+    width: 35px; height: 35px;
+    border-radius: 4px;
+    position: relative;
+    top: 11px;
+    margin-left: 5px;
+    cursor: hand; cursor: pointer;
+    -webkit-user-select: all;  /* Chrome all / Safari all */
+    -moz-user-select: all;     /* Firefox all */
+    -ms-user-select: all;      /* IE 10+ */
+    -o-user-select: all;
+    user-select: all;
+}
+
+.qstickerEditor-typeColor {
+    -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #adadad;
+}
+
+.qstickerEditor-typeGrid {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: 1px solid #adadad;
+}
+
+.qstickerEditor-typeGrid:hover {
+    background-color: #ebebeb;
+}
+.qstickerEditor-typeGrid.active {
+    background-color: #c8ebfd;
+    border-color: #428bca;
+}
+.qstickerEditor-typeColor.active {
+    border-color: #428bca;
+}
+
+.qstickerEditor-typeGridContainer {
+    width: 180px;
+    padding-bottom: 14px;
+}
+.qstickerEditor-typeGridContainer .qstickerEditor-typeGrid {
+    margin: 0 5px;
+}
+
+.qstickerEditor-typeColorContainer {
+    width: 270px;
+    padding-bottom: 14px;
+}
+.qstickerEditor-typeColorContainer .qstickerEditor-typeColor {
+    margin: 0 5px;
+}
+
+.qstickerEditor-container .qstickerEditor-overlay, .qstickerEditor-container .qstickerEditor-underlay, .qstickerEditor-container .qstickerEditor-editorOverlay {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.qstickerEditor-container .qstickerEditor-editorOverlay {
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+.qstickerEditor-container .qstickerEditor-gridContainer,  .qstickerEditor-container .qstickerEditor-canvasContainer, .qstickerEditor-container .qstickerEditor-imageContainer{
+    position: relative;
+}
+
+#qstickerSubmitContainer {
+}
+
+#qstickerSubmitContainer .qstickerSubmit-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#qstickerSubmitContainer .qstickerSubmit-price {
+    margin-bottom: 12px;
+    margin-top: 3px;
+}
+
+.qstickerEditor-imageBorder {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    margin: -1px;
+    border: 1px solid #000;
+    cursor: all-scroll;
+    z-index: 5;
+}
+
+.qstickerEditor-imageBorder.no-bordered {
+    border: medium none;
+}
+
+.qstickerEditor-imageBorder .qstickerEditor-imagePreview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+.qstickerEditor-imageBorder .qstickerEditor-buttonScale {
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    margin: -15px;
+    border-radius: 99px;
+}
+.qstickerEditor-imageBorder .qstickerEditor-buttonRotate {
+    position: absolute;
+    padding: 5px;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    margin: -15px;
+    border-radius: 99px;
+}
+
+.qstickerEditor-imageBorder .qstickerEditor-buttonDelete {
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    margin: -15px;
+    border-radius: 99px;
+    cursor: hand; cursor: pointer;
+}
+
+.qstickerEditor-imageBorder .qstickerEditor-buttonDelete i {
+    position: relative;
+    left: 3px;
+}
+
+.qstickerFinal-imageContainer {
+    float: left;
+    width: 400px;
+}
+
+.qstickerFinal-informationContainer {
+    padding-left: 420px;
+}
+
+.qstickerFinal-informationContainer h2 {
+    font-weight: 400;
+}
+
+.qstickerFinal-imageContainer .button-return i {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.qstickerFinal-imageContainer .container-image {
+    margin-bottom: 10px;
+}
+
+.qstickerFinal-informationContainer .container-information {
+    margin: 20px 0;
+}
+
+.qstickerFinal-informationContainer .container-options {
+    margin-bottom: 20px;
+    min-height: 110px;
+}
+
+.qstickerFinal-informationContainer .container-options .container-imagesIcons {
+    float: left;
+    width: 200px;
+}
+
+.qstickerFinal-informationContainer .container-options .container-imagesIcons .image-icon {
+    margin: 0 10px;
+}
+
+.qstickerFinal-informationContainer .container-options .container-optionsDescription {
+    padding-left: 220px;
+}
+
+.qstickerFinal-informationContainer .container-submit .container-price {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 14px;
+    position: relative;
+    top: 4px;
+}
+
+.qstickerPhotos-photosContainer {
+    margin-top: 15px;
+    margin-left: -6px;
+}
+
+.qstickerPhotos-photosLoadMoreContainer {
+    margin-top: 10px;
+}
+
+.qstickerPhotos-photosLoadMoreContainer .helper {
+    font-size: 16px;
+}
+
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItem, .qstickerPhotos-photosContainer .qstickerPhotos-photoItemPreview {
+    width: 100px;
+    height: 100px;
+}
+
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItem {
+    display: inline-block;
+    margin-left: 6px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItem .qstickerPhotos-photoItemCheckbox {
+    border: 1px solid #fff;
+    border-radius: 99px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    transition: background-color .1s;
+    -webkit-transition: background-color .1s; /* Safari */
+}
+
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItem .qstickerPhotos-photoItemCheckbox.checkbox-selected {
+    /*content: "✓";*/
+    color: #fff;
+    font-size: 12px;
+    background-color: #4ee02c;
+}
+
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItem .qstickerPhotos-photoItemCheckbox.checkbox-unselected .text-checkbox {
+    display: none;
+}
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItem .qstickerPhotos-photoItemCheckbox.checkbox-selected .text-checkbox {
+    display: block;
+    position: relative;
+    left: 2px;
+    top: -1px;
+}
+
+.qstickerPhotos-photosContainer .qstickerPhotos-photoItemPreview {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #adadad;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.user-container {}
+    .user-container .user-image {
+        display: inline-block; width: 50px; height: 50px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid #adadad;
+        vertical-align: middle;
+    }
+    .user-container .user-info {
+        margin-left:10px;
+    }
+
+.list-albums {}
+    .list-albums .album-image {
+        display: inline-block;
+        width: 75px; height: 75px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f5f5f5;
+        border: 1px solid #adadad;
+        vertical-align: middle;
+    }
+    .list-albums .album-photosCounter {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .list-albums .album-title {
+        margin: 0 10px;
+    }
+
+.qstickerSubmit-container {
+    padding: 13px;
+    background-color: #f7f7f7;
+    padding-top: 9px;
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+
+.qstickerSubmit-container .qstickerSubmit-title {
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+.qstickerSubmit-container .qstickerSubmit-price  .input-priceContainer {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.qstickerFinal-priceContainer {
+    padding: 24px 0 24px 24px;
+    background-color: #f3f3f3;
+    border-top: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+    /*display: inline-block;*/
+}
+
+.qstickerHintImage {
+    position: fixed;
+    z-index: 145;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.qstickerIndexImage {
+    text-align: center;
+}
+    .qstickerIndexImage img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.qstickerPictures-container {
+    margin-left: -10px;
+}
+
+.qstickerPictures-container .qstickerPictures-image {
+    margin-left: 10px; margin-bottom: 10px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #f5f5f5;
+}
+
+.qsticker-ProductsListContainer {
+    transition: margin-top .4s;
+    -webkit-transition: margin-top .4s; /* Safari */
+}
+
+#qstickerProductContainer {
+    padding: 20px 0;
+    min-height: 520px;
+    background-color: #fff;
+}
+
+.qstickerCategories-row {
+    margin-left: -10px;
+    text-align: center;
+}
+
+.qstickerCategories-row .qstickerCategories-cell {
+    margin-left: 10px;
+    width: 240px;
+    display: inline-block;
+    padding: 30px 30px 20px;
+}
+.qstickerCategories-row .qstickerCategories-cell h3 {
+    text-align: center; font-size: 20px; font-weight: 200;
+}
+.qstickerCategories-row .qstickerCategories-cell img {
+    max-width: 100%;
+}
