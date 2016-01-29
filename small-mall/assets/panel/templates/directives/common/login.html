@@ -1,0 +1,27 @@
+<div class="" ng-hide="User">
+    <div class="container-center-sm">
+        <h1 class="header-index">Log In</h1>
+
+        <div class="panel panel-danger" ng-show="messageLogin">
+            <div class="panel-body">
+                {{messageLogin}}
+            </div>
+        </div>
+
+        <form role="form" ng-submit="submitLogin()">
+            <div class="form-group has-feedback has-feedback-left">
+                <label for="user-email">Email</label>
+                <input type="email" class="form-control" id="user-email" ng-model="userLogin.email" required placeholder="Enter email" />
+                <span class="icon-text-symbol form-control-feedback text-muted">@</span>
+            </div>
+            <div class="form-group has-feedback has-feedback-left">
+                <label for="user-password">Password</label>
+                <input type="password" class="form-control" id="user-password" ng-model="userLogin.password" required placeholder="Enter password" />
+                <span class="glyphicon glyphicon glyphicon-lock form-control-feedback text-muted"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-lg" value="Log In" />
+            </div>
+        </form>
+    </div>
+</div>

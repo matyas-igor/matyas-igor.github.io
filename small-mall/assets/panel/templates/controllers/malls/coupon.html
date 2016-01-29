@@ -1,0 +1,45 @@
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="navbar-brand navbar-brand-center" content-for="title"><span>{{Storage.malls.coupon.name}}</span></div>
+
+        <div class="section container-fluid" style="margin-bottom: 0px; padding-bottom: 0;">
+            <div class="media">
+
+                <div class="pull-left">
+                    <div ng-style="{'background-image':'url('+Storage.malls.coupon.imageSrc+')'}" class="box-coupon-image"></div>
+                </div>
+                <div class="media-body">
+                    <div style="display: table; height: 64px; overflow: hidden;">
+                        <div style="display: table-cell; vertical-align: middle;">
+                            <h3 class="media-heading">{{Storage.malls.coupon.name}}</h3>
+                            <p style="margin-bottom: 0;" class="text-muted">{{Storage.malls.coupon.position}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div bs-panel>
+                <p class="lead" style="font-size: 22px; font-weight: 200; margin: 20px 0 0;">{{Storage.malls.coupon.offer}}</p>
+            </div>
+            <hr>
+            <h4 class="text-center" style="font-weight: 100;">Mall Map</h4>
+            <h5 class="text-center text-muted" style="font-weight: 200;">how to get to the shop</h5>
+        </div>
+
+        <div class="img-mall-map" style="margin-bottom: 20px;"></div>
+<hr>
+        <div class="section container-fluid" style="margin-bottom: 0px; padding-bottom: 0;">
+            <h4 class="text-center" style="font-weight: 100;">QR Code</h4>
+            <h5 style="margin-bottom: 0px; padding-bottom: 0; font-weight: 200;" class="text-center text-muted">show this code at checkout to get a discount</h5>
+        </div>
+
+        <div class="img-qr-code"></div>
+
+        <div class="section container-fluid">
+            <p class="text-monospace text-danger lead text-center">
+                <strong>Code: {{Storage.malls.coupon.code}}</strong>
+            </p>
+        </div>
+    </div>
+</div>

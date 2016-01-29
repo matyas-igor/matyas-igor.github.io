@@ -1,0 +1,7 @@
+<div class="box-messages-outer" ng-show="Messages" ng-cloak>
+    <div class="box-messages">
+        <div class="{{Settings.isFluid ? 'container-fluid' : 'container'}}">
+            <div ng-repeat="Message in Messages" class="box-messages-animation alert {{Message.success ? 'alert-success' : 'alert-danger'}}">[{{Message.date}}] <span ng-bind-html="Message.text | toTrusted"></span></div>
+        </div>
+    </div>
+</div>

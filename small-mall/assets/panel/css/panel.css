@@ -1,0 +1,115 @@
+.feature-icon {
+    font-size: 44px;
+    padding: 0;
+    line-height: 64px;
+    width: 64px;
+    text-align: center;
+    opacity: .8;
+}
+
+.app-content-loading {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+
+.loading-spinner {
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+.text-monospace {
+    font-family: Consolas, "Courier New", monospace;
+    line-height: 1.2;
+}
+.input-monospace {
+    font-family: Consolas, "Courier New", monospace;
+    line-height: 1.2;
+    padding: 5px 12px 3px;
+}
+
+.paragraph-heading {
+    margin-top: 15px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+.header-heading {
+    margin-top: 10px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+.app {
+    background-color: #fff !important;
+}
+
+.coupon-index-outer {
+    text-align: center;
+}
+
+.coupon-index {
+    margin: 0;
+    width: 320px;
+    height: 160px;
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.container, .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.page-header {
+    border-bottom: medium none;
+    font-weight: 100;
+}
+
+.list-coupons {
+    margin-bottom: 0 !important;
+}
+
+.box-coupon-image {
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.img-mall-map {
+    width: 320px;
+    height: 199px;
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/mall-map.png);
+    margin: 0 auto;
+}
+
+.img-qr-code {
+    width: 320px;
+    height: 320px;
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/qrcode-smallmall.png);
+    margin: 0 auto;
+}
+
+.media>.pull-left {
+    margin-right: 15px;
+}
